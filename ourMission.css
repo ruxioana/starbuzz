@@ -1,0 +1,24 @@
+﻿body {
+    background-color: NavajoWhite; /*culoare de fundal, de aceea se scrie in body*/
+    font-family: fantasy; /*familia de fonturi se foloseste in caz ca browserul sau alti factori influenteaza aparitia fontului dorit de noi. asa ca dam o lista de fonturi din care sa aleaga pe rand daca nu este gasit primul.*/
+}
+
+h1 {
+    font-size: 35px; /*dimensiunea fontului/scrisului se face in numar de pixeli, insa acum nu mai folosim nr de pixeli, pentru ca vrem ca site-ul nostru sa fie responsive - depinde de rezolutia ecranului pe care il vom vedea*/
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    color: darkolivegreen; /*culoarea textului h1, daca vreau sa se aplice la mai multe, pun virgula apoi restul, h3, h2, sau ce mai vreau*/
+}
+
+h2 {
+    color: saddlebrown; /*daca aceste comenzi vin in aceasta ordine, aceasta culoare pentru h3 va fi pastrata. comenzile se iau in ordine.*/
+}
