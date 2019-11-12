@@ -1,0 +1,31 @@
+body {
+    background-color: NavajoWhite;
+    font-family: fantasy;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    color: darkolivegreen;
+}
+
+h2 {
+    color: saddlebrown;
+}
+
+span {
+    color: saddlebrown;
+}
+
+#special {
+    color: darkolivegreen;

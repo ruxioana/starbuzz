@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> <!--language english, direction: left to right-->
+  <head>
+    <meta charset="utf-8"> <!--utf is a kind of extended ascii code; 8 e un fel de grupa, te lasa sa scrii in orice limba-->
+    <title>Starbuzz</title> <!--titlul care este scris in loc de .html in tab-ul din browser-->
+    <link rel="stylesheet" href="starbz.css"> <!-- creaza un link intre html si css -->
+<!--here begins the css writing-->
+<!--    <style media="screen" type="text/css">
+      body {
+        background-color: NavajoWhite; /*culoare de fundal, de aceea se scrie in body*/
+      }
+      h1, h3 {
+        color: darkolivegreen; /*culoarea textului h1, daca vreau sa se aplice la mai multe, pun virgula apoi restul, h3, h2, sau ce mai vreau*/
+      }
+      h3 {
+        color: saddlebrown; /*daca aceste comenzi vin in aceasta ordine, aceasta culoare pentru h3 va fi pastrata. comenzile se iau in ordine.*/
+      }
+      span {
+        color: darkolivegreen;
+      }
+      #special { /*folosim id-ul creat mai devreme, pentru astfel de id-uri se foloseste "#" pentru a le defini*/
+        color: saddlebrown;
+      }
+    </style>
+here ends the css writing-->
+
+  </head>
+
+<!--
+to comment a text: select the text command+/ (mac) or ctrl+/ (windows)
+html_symbols pe w3schools.com pentru a scrie simboluri speciale in html sau "mdn html entities
+ -->
+
+  <body>
+    <h1>Welcome to Starbuzz!</h1> <!-- &lt; = < iar &gt; = > -->
+
+    <h2>Menu</h2>
+
+    <h3>Latte Macchiato <span>10$</span></h3> <!--span izoleaza o anumita parte pentru a o putea stiliza mai tarziu -->
+    <img src="https://raw.githubusercontent.com/miezuit/html_css_training/master/starbuzz/images/capuccino.jpg" alt="latte machiato"> <!-- alt e obligatoriu pentru persoanele care nu pot vedea pozele. este o descriere alternativa la poza respectiva. acum introducem imaginea direct de pe github -->
+    <p>A classic drink made with <span id="special">love</span>, milk and arabica roasted beans.</p> <!-- o sa atribui un id special, pentru a putea modifica doar aceasta parte, iar special este tot un span, insa este mai important decat uzualul "span" -->
+
+    <h3>Hot chocolate <span>8$</span></h3>
+    <img src="https://raw.githubusercontent.com/miezuit/html_css_training/master/starbuzz/images/coffee.jpg" alt="hot chocolate">
+    <p>The sweet bevarage of kings and queens at a special price.</p>
+
+    <h3>Fruit Tea <span>7$</span></h3>
+    <img src="https://github.com/miezuit/html_css_training/raw/master/starbuzz/images/tea.jpg" alt="fruit tea">
+    <p>A large variety of exotic flavours to choose from to keep you warm.</p>
+
+    <a href="file:///C:/Users/utilizat/Desktop/starbz/ourMssn.html">Our Mission</a> <!-- facem referire la un alt site: hyperlink; il accesam cand dam click pe go away -->
+  </body>
+</html>
+
+<!-- best practice: don't mix css and html together, use another file for css -->
