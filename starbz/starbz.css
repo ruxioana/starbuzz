@@ -16,6 +16,13 @@ h1, h3 {
 h3 {
   color: saddlebrown; /*daca aceste comenzi vin in aceasta ordine, aceasta culoare pentru h3 va fi pastrata. comenzile se iau in ordine.*/
 }
+/*p.tea - toate paragrafele care sunt in clasa tea (la astea se aplica stilul)*/
+.tea { /*pentru a stiliza toate elementele dintr-o clasa, se pune mai intai punct(.) iar apoi numele clasei*/
+  color: green;
+}
+.cacao { /*clasele sunt si mai sepcifice decat h1,2,3 de exemplu, deci indiferent de ordine, ceea ce este scris la clasa va fi suprascris peste h1,2,3*/
+  color: chocolate;
+}
 span {
   color: darkolivegreen;
 }

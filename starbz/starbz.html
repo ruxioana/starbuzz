@@ -29,26 +29,52 @@ here ends the css writing-->
 <!--
 to comment a text: select the text command+/ (mac) or ctrl+/ (windows)
 html_symbols pe w3schools.com pentru a scrie simboluri speciale in html sau "mdn html entities
+
+pentru formatul XHTML este necesar sa terminam elementele goale cu slash '/' la final; de exemplu <img/>
+
+sunt niste sageti in jos (langa numarul randului) la anumite elemente deschise si inchise, care au o linie verticala in cod; daca sunt apasate, se colapseaza sau intregeste bucata de cod care se gaseste intre acele elemente
  -->
 
   <body>
     <h1 id="start"> Welcome to Starbuzz!</h1> <!-- &lt; = < iar &gt; = > -->
 
+    <q>A good day starts with a good coffee</q> !!! <!-- this is a quote in line --> 
+
+    <blockquote>A good day starts with a good coffee</blockquote> !!! <!-- this is a quote in block --> 
+
+    <hr/>
+
+    <h2>Why us</h2> <!-- here we'll play with lists -->
+
+    <ul> <!-- unordered list -->
+     <li>great taste</li> <!-- with 'li' (list item - in block) we'll have bullet points - liste neordonate (unordered list) -->
+     <li>best coffee & barista in town</li> 
+     <li>one free coffee for students</li> 
+    </ul>
+
+    <ol> <!-- ordered list: the items in the list here are ordered with 1., 2. etc -->
+      <li>great taste</li> 
+      <li>best coffee & barista in town</li> 
+      <li>one free coffee for students</li> 
+    </ol>
+
     <h2>Our Menu</h2>
 
-    <h3>Latte Macchiato <span>10$</span></h3> <!--span izoleaza o anumita parte pentru a o putea stiliza mai tarziu -->
-    <img src="https://raw.githubusercontent.com/miezuit/html_css_training/master/starbuzz/images/capuccino.jpg" alt="latte machiato"> <!-- alt e obligatoriu pentru persoanele care nu pot vedea pozele. este o descriere alternativa la poza respectiva. acum introducem imaginea direct de pe github -->
+    <h3 class="coffee drink"> Latte Macchiato <span>10$</span></h3> <!--span izoleaza o anumita parte pentru a o putea stiliza mai tarziu -->
+    <img src="https://raw.githubusercontent.com/miezuit/html_css_training/master/starbuzz/images/capuccino.jpg" alt="latte machiato"/> <!-- alt e obligatoriu pentru persoanele care nu pot vedea pozele. este o descriere alternativa la poza respectiva. acum introducem imaginea direct de pe github; aceasta imagine este tot in line -->
     <p>A classic drink made with <span id="special">love</span>, milk and arabica roasted beans.</p> <!-- o sa atribui un id special, pentru a putea modifica doar aceasta parte, iar special este tot un span, insa este mai important decat uzualul "span" -->
 
-    <h3>Hot chocolate <span>8$</span></h3>
+    <h3 class="cacao drink">Hot chocolate <span>8$</span></h3> <!-- clasele diferite influenteaza css-ul, stilizarea, toate elementele din clasa vor avea aceeasi proprietati; un element poate fi in mai multe clase -->
     <img src="https://raw.githubusercontent.com/miezuit/html_css_training/master/starbuzz/images/coffee.jpg" alt="hot chocolate">
     <p>The sweet bevarage of kings and queens at a special price.</p>
 
-    <h3>Fruit Tea <span>7$</span></h3>
+    <h3 class="tea drink vegan">Fruit Tea <span>7$</span></h3> <!-- tea se incadreaza in mai multe clase ca sa se poata aplica stilul dorit -->
     <img src="https://github.com/miezuit/html_css_training/raw/master/starbuzz/images/tea.jpg" alt="fruit tea">
     <p>A large variety of exotic flavours to choose from to keep you warm.</p>
 
-    <a href="file:///Users/javascript/github/starbuzz/starbz/ourMssn.html" title="Our Mission" target="_blank">Our Mission</a> <!-- facem referire la un alt site: hyperlink; il accesam cand dam click pe go away -->
+    <a href="file:///Users/javascript/Desktop/ruxi/Visual%20Code/starbuzz/starbz/ourMssn.html" title="Our Mission" target="_blank">Our Mission> <!-- facem referire la un alt site: hyperlink; il accesam cand dam click pe go away -->
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google image">
+    </a>
     <a href="#start">Go to start</a>
   </body>
 </html>
