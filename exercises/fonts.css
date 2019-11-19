@@ -1,10 +1,28 @@
 #p1 {
-    font-weight: bold;
+    font-weight: normal;
     font-family: 'Quicksand', sans-serif;
-    text-decoration: wavy;
+    text-decoration: overline;
+    font-size: 1.2em;
+    text-align: center;
+    border: 3px dotted peachpuff; /*in loc sa avem cele 3 proprietati scrise individual (style, width si color) le putem scrie pe linie asa and it's the same thing*/
+    border-style: dotted;
+    border-width: 3px 6px;
+    border-color: peachpuff;
+    border-radius: 1em;
+    padding: 5px 10px; /*prima este pentru sus si jos, ultima pentru stanga dreapta, daca sunt toate 4, este top, right, bottom, left; daca sunt puse 3, prima e de sus, ultima de jos iar valoarea din mijloc este pentru stanga-dreapta*/
+    margin: auto; /*in loc sa setam marginea de mana in pixeli sau altceva, dam auto, ca sa ramana pe centru; se alinieaza insa doar pe orizontala*/
+    background-color: aqua; /*se schimba culoarea din content si padding, fara border*/
+    background-image: url(background.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: rgb(27, 37, 121); /*daca nu setezi culoarea bordurii, aceasta va lua automat culoarea setata pentru font*/
+    width: 70%;
+    height: 100px;
 }
 
 p {
     font-weight: normal;
-    text-decoration: wavy;
+    text-decoration: underline;
+    line-height: 1.2em;
 }
