@@ -1,3 +1,7 @@
+body {
+    box-sizing: border-box;
+}
+
 #p1 {
     font-weight: normal;
     font-family: 'Quicksand', sans-serif;
@@ -19,10 +23,27 @@
     color: rgb(27, 37, 121); /*daca nu setezi culoarea bordurii, aceasta va lua automat culoarea setata pentru font*/
     width: 70%;
     height: 100px;
+    box-sizing: border-box; /* acum nu mai e nevoie de linia asta pentru ca am pus-o in body deja asa ca se aplica la toate care intra in body */
 }
 
 p {
     font-weight: normal;
     text-decoration: underline;
     line-height: 1.2em;
+}
+
+#p1 span { /* aici alegem doar span-ul din primul paragraf */
+    color: yellow;
+}
+
+div {
+    background-color: blue;
+    border: 2px solid black;
+    padding: 10px; /* se aplica la ambele idv-uri, si pentru cel mare si pentru cel mic; se verifica specificitatea - daca nu este nimic mai specific, se preia acest atribut */
+}
+
+div div { /* nu suprascrie div-ul de mai sus */
+    background-color: teal;
+    border: 2px solid red;
+    width: 75%;
 }
