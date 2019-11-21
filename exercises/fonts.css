@@ -22,7 +22,7 @@ body {
     background-size: contain;
     color: rgb(27, 37, 121); /*daca nu setezi culoarea bordurii, aceasta va lua automat culoarea setata pentru font*/
     width: 70%;
-    height: 100px;
+    height: 130px;
     box-sizing: border-box; /* acum nu mai e nevoie de linia asta pentru ca am pus-o in body deja asa ca se aplica la toate care intra in body */
 }
 

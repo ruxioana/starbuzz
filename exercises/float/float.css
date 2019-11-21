@@ -1,0 +1,9 @@
+div.float {
+    float: left; /* textul ocoleste cuvantul/imaginea din float */
+    height: 18px;
+    width: 100px;
+    background-color: lightgreen;
+}
+div:last-child {
+    background-color: lightskyblue;
+}

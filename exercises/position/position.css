@@ -1,0 +1,41 @@
+body {
+    height: 1500px;
+}
+div div {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle; /*se aliniaza vertical, dar se aliniaza la inaltimea liniei*/
+    line-height: 100px; /*aici trebuie sa schimbam inaltimea liniei la height-ul de mai sus ca sa se alinieze si vertical*/
+}
+.container {
+    background-color: lightpink;
+    width: 300px;
+    position: relative;
+    left: 30%;
+}
+div div:first-child {
+    background-color: yellow;
+    position: absolute; /*il scoate din flow pe halli, adica sta peste parinte - pluteste in fata lui hallo*/
+    right: 100px; /* se da cu 100px mai la stanga de la marginea din dreapta */
+    /* bottom: 500px; se duce prea sus */
+    z-index: 1; /* by default toate sunt la 0, adica in spate si este luat in functie de ordinea in care este scris */
+}
+div div:nth-child(2) {
+    background-color: lightseagreen;
+    position: fixed; /* nu mai are legatura cu parintele lui si e fix la pagina browser-ului */
+    top: 40%;
+    left: 50%;
+}
+div div:nth-child(3) {
+    background-color: mediumslateblue;
+    position: sticky;
+    top: 5%;
+    left: 5%;
+}
+div div:last-child {
+    background-color: lightblue;
+    position: relative; /*se pozitioneaza relativ la pozitia la care este el acum*/
+    top: -10px; /*cu 10 px mai sus fata de cum era; "top:-10px" = "bottom:10px"*/
+    left: 50%; /*50% este relativ la parintele lui, adica la div-ul lui si nu la pagina*/
+}
