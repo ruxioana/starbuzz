@@ -1,0 +1,12 @@
+body {
+    box-sizing: border-box;
+    text-align: center;
+}
+div {
+    padding: 5px;
+    border-width: 3px 6px;
+    background-color: peachpuff;
+    /* background-size: contain; */
+    border-color: rgb(37, 36, 34);
+    margin: 5px 400px;
+}
