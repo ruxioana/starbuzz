@@ -1,0 +1,53 @@
+* { /* facem reset la tot, mereu cand ne apucam sa stilizam un site */
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: sans-serif;
+    background-color: rgb(211, 211, 211);
+}
+img {
+    width: 15em;
+    display: inline-block;
+}
+header {
+    background-color: rgb(51, 51, 51);
+    color: #eee;
+    text-align: center;
+}
+header a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+li {
+    display: inline-block;
+    padding: 10px;
+}
+article {
+    padding: 2.5em;
+    text-align: center;
+}
+h1 {
+    font-family: monospace;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+}
+div {
+    display: inline-block;
+    vertical-align: top;
+}
+p {
+    padding: 2.2em;
+}
+input[type="button"] {
+    text-transform: uppercase;
+    background-color: orange;
+    font-size: 1em;
+    padding: 0.3em 0.2em;
+    border-radius: 0.8em;
+    color: white;
+    margin-top: 2em;
+}
