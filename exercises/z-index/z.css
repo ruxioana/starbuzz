@@ -1,0 +1,24 @@
+div:first-child {
+    background-color: darkorchid;
+    width: 20%; /* nu e patrat, pentru ca se raporteaza la dimensiunea ferestrei din browser */
+    height: 20%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    opacity: 0.5; /* opacitatea poate fi doar intre 0 si 1; 0 e transpareant, 1 este opac - se aplica pe ot continutul elementului */
+    /* daca vrem sa facem opacitate doar pe culoare, folosim rgba, care este un rgb iar a reprezinta opacitatea, de exemplu tot 0.5 */
+}
+div:nth-child(2) {
+    background-color: darkslategray;;
+    width: 20%; /* nu e patrat, pentru ca se raporteaza la dimensiunea ferestrei din browser */
+    height: 20%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: -1; /* by default au 0, cu -1 va fi sub primul div */
+}
+div:nth-child(3) {
+    position: relative; /* acum indiferent de z-index, div 3 va fi deasupra */
+    margin-top: 30%; /* div 1 este deasupra lui div 3, pentru ca div 3 nu este pozitionat absolut (sau pozitionat in orice fel); z-index nu influenteaza aceasta regula */
+    z-index: 2; /* iar nu este influentat cu nimic */
+}

@@ -1,0 +1,38 @@
+div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 20%;
+    left: 20%;
+    background-color: dodgerblue;
+    text-align: center;
+    line-height: 200px; /* tehnica asta de centrare merge doar daca stim inaltimea div-ului */
+    /* am putea folosi si verital align, dar vertical align tine tot de line height, iar daca line height este doar cat linia textului, nu se va alinia pe centrul patratului */
+    border-radius: 50%; /* acum am facut dintr-un patrat intr-un cerc */
+}
+div {
+    animation-name: rotate;
+    animation-duration: 3s; /* cat dureaza pana face o rotatie completa */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; /* ca sa scapam de ceea ce pare un delay, pentru ca by default, animatia incepe mai lent, apoi rapid si la final iar lent */
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+}
+div:hover {
+    animation-play-state: paused; /* animatia face pauza cand punem mouse-ul pe patrat, si cand luam mouse-ul de acolo, continua */
+}
+@keyframes rotate { /* fiecare animatie poarta si un nume ca sa tinem minte mai usor si sa identificam ceea ce facem */
+    from { /* punctul de plecare, frame-ul initial, se poate scrie si cu 0% */
+        transform: rotate(0deg);
+        left: 0%; /* astfel facem patratul sa se rostogoleasca pe orizontala de la stanga la dreapta */
+        top: 20%;
+    }
+    50% {
+        top: 50%; /* dam patratul un pic mai jos, dar pentru asta trebuie sa introducem top si in "from" si in "to" */
+    }
+    to { /* frame-ul final, acolo unde vrem sa ajungem, se poate nota si cu 100% */
+        transform: rotate(360deg);
+        left: 100%; /* la 100% se duce in afara browserului */
+        top: 20%;
+    }
+} /* inca nu am facut legatura cu un anumit element pe care vrem sa il animam */

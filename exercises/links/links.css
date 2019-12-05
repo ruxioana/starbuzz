@@ -49,3 +49,14 @@ a:hover {
     top: 30%;
     background-color: palevioletred;
 }
+.trans2 {
+    background-color: darkcyan;;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    padding: 30px;
+    transform: rotate(-30deg); /* nu e limitat la 360 de grade */
+    transform-origin: top left;
+    transition: transform 2s; /* limitam tranzitia doar pe transformare */
+    transition-delay: 1s;
+}
