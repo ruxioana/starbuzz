@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: sans-serif;
+}
+h1 {
+    text-align: center;
+    color: rgb(203, 113, 48);
+    padding: 1em;
+}
+img {
+    display: inline-block;
+    border-radius: 8em;
+}
+p {
+    color: rgb(130, 130, 130);
+}
+.vl {
+    border-left: 6px solid rgb(53, 109, 155);
+    height: 300px;
+    position: absolute;
+    left: 40%;
+    margin-left: -3px;
+    top: 0;
+  }
+h2 {
+    color: rgb(53, 109, 155);
+}
+div {
+    position: absolute;
+    width: 55%;
+    height: 25%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#description {
+    display: inline-block;
+    padding: 1em;
+}
