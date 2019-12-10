@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script</title> 
+    <script src="first.js"></script> <!-- incarcarea html-ului se va intrerupe ca sa fie incarcat script-ul de java, abia apoi se continua html-ul, deci elementele din Java Script vor fi incarcate primele, daca am pus aici script-ul -->
+</head>
+<body>
+    <!-- <script> /* putem scrie Java Script in html daca il scriem in interiorul acestui script */
+        var name = "Ruxi"; /*  urmeaza o concatenare */
+        var myMessage = "Hello " + name + "!"; /* asa declaram o variabila, se poate folosi si cu numere */
+        var myTime = 2000;
+        var isNight = true; /* it's boolean - numele este sugestiv */
+        var nothing = null;
+        setTimeout(sayHello, myTime); /* timpul e in milisecunde, si inainte de asta ii zicem sa faca actiunea sayHello */
+        function sayHello() { /* aici am creat o noua instructiune - se numesc identificatori */
+            // alert(myMessage); /* apare un pop-up cu "hello java script" - hence the alert */
+            console.log(myMessage); /* folosim consola pentru a afisa mesajul, fara ca utilizatorul sa il vada */
+        }
+        /* pentru a folosi ghilimelele in ghilimele si vrei sa fie interpretate ghilimelele normal, pui backslash inainte de ghilimelele care vrei sa apara in text */
+    </script> -->
+</body>
+</html>

@@ -12,8 +12,9 @@ h1 {
     padding: 1em;
 }
 img {
-    display: inline-block;
+    display: block;
     border-radius: 8em;
+    border-right: 300px; /* in loc de linia verticala */
 }
 p {
     color: rgb(130, 130, 130);
