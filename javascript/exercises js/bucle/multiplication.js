@@ -12,6 +12,6 @@ console.log(scores[2]);
 console.log(scores[0]=50);
 console.log(scores.length); /* returns the length of the array */
 console.log(scores.push(100)); /* adauga un element la coada listei */
-console.log(scores.pop); /* sterge ultimul element */
+console.log(scores.pop()); /* sterge ultimul element */
 console.log(scores.unshift(10)); /* adauga un element pe prima pozitie */
 console.log(scores.shift); /* sterge elementul de pe prima pozitie */

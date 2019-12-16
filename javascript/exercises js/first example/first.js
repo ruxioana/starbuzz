@@ -40,16 +40,3 @@ setTimeout(sayHello, myTime); /* timpul e in milisecunde, si inainte de asta ii 
 /* var timp = 1;
 timp++;
 timp++; console.log(timp); */
-
-var age = prompt("How old are you?", "write your age here");
-if(age<=12) {
-    alert("You're still a child!");
-} else if (age<=20) {
-    alert("You're a teenager.");
-} else if (age<=55){
-    alert("Adulthood is here!");
-} else if (age<=100) {
-    alert("Wow... your're old!");
-} else {
-    alert("Just how long will you live?");
-}
