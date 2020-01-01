@@ -1,30 +1,17 @@
-var startButton = document.querySelector("input");
-var myNumber = prompt("What's my number?", "write your guess here");
+var y = Math.floor(Math.random() * 10 + 1); /* random value generated */
+ 
+var guess = 1; /* counting the number of guesses made for correct guess */
+  
+document.getElementById("submitguess").onclick = function(){  
+    var x = document.getElementById("guessField").value; /* number guessed by user */
 
-startButton.addEventListener("click", start);
-
-function start() {
-    startButton.style.display = "none";
-    newNumber(); 
-    var num = newNumber();
-}
-
-function newNumber() {
-    var numbers = [0,1,2,3,4,5,6,7,8,9];
-    let div = document.createElement("div");
-    let pos = randomNumber(numbers.length);
-    document.querySelector("body").appendChild(div);
-    return numbers.charAt(pos);
-}
-function randomNumber(max) {
-    return Math.round(Math.random() * max);
-}
-function inquiry() {
-    if(myNumber == num) {
-        alert("Congrats! You found my number!");
-    } else if (myNumber < num) {
-        alert("too small");
-    } else if (myNumber > num) {
-        alert("big");
-    }
-}
+    if(x == y) {     
+        alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN " + guess + " GUESS "); 
+    } else if(x > y) { /* if guessed number is greater than actual number*/ 
+        guess++; 
+        alert("OOPS SORRY!! TRY A SMALLER NUMBER"); 
+    } else { 
+        guess++; 
+        alert("OOPS SORRY!! TRY A GREATER NUMBER") 
+    } 
+} 
