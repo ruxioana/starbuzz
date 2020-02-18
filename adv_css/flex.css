@@ -1,0 +1,14 @@
+nav {
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+}
+div:first-child {
+    background-color: sandybrown;
+}
+div:nth-child(2) {
+    background-color: skyblue;
+}
+div:last-child {
+    background-color: lightcoral;
+}
