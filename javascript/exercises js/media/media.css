@@ -1,0 +1,21 @@
+/* @media (max-width: 768px) { */ /* aici am lasat sa fie default pentru mobile first */
+    div {
+        background-color: cadetblue;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+    }
+/* } */
+
+@media (min-width: 769px) { /* media query este facut pentru o situatie speciala */
+    div { /* asta se aplica in cazul in care cea de mai sus nu se mai aplica */
+        background-color: goldenrod;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        
+    }
+}
+
+/* pentru node js sa vad daca e instalat, scriu in terminal "node -v", apoi trebuie sa apara versiunea daca e instalat */
+/* trebuie sa instalam un fisier care sa faca trecerea de la scss la css simplu, si trebuie sa scriem in terminal-ul din acel folder "npm install node-sass"*/

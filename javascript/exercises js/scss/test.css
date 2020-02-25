@@ -1,0 +1,20 @@
+/* fisierele care sunt doar incluse in alte fisiere css/scss se denumesc cu "_" inainte de numele lor */
+/* variabilele se definesc cu semnul de dolar */
+nav ul {
+  background-color: gainsboro; }
+  nav ul li {
+    /* putem stiliza individual li si a in interiorul lui ul, dupa ce l-am stiliyat pe ul */
+    display: inline-block; }
+  nav ul a {
+    text-decoration: none;
+    color: pink;
+    padding: 20px; }
+
+button {
+  background-color: cyan; }
+
+h1 {
+  color: cyan; }
+
+/* deschidem un nou terminal in folder-ul scss si scriem "node_modules/.bin/node-sass style.scss style.css" pentru a compila fisierul nostru scss (denumirile de .scss si .css trebuie schimbate cu numele curent al fisierului)*/
+/* mai trebuie sa instalam inca 2 fisiere pentru a mentine sincronizate scss-ul si css-ul, ca sa nu facem manual compilarea - instalam gulp si gulp-sass (acel "-g" este pentru global) */

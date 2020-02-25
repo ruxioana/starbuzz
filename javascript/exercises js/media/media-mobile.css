@@ -1,0 +1,6 @@
+div { /* sunt doua fisiere separate in functie de dimensiunea ecranului */
+    background-color: cadetblue;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+}

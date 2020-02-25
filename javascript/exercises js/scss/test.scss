@@ -1,0 +1,28 @@
+@import 'var';
+
+$base_color: cyan; /* variabilele se definesc cu semnul de dolar */
+
+nav {
+    ul {
+        background-color: gainsboro;
+        li { /* putem stiliza individual li si a in interiorul lui ul, dupa ce l-am stiliyat pe ul */
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            color: $secondary_color;
+            padding: $default_padding * 2;
+        }
+    }
+}
+
+button {
+    background-color: $base_color;
+}
+
+h1 {
+    color: $base_color;
+}
+
+/* deschidem un nou terminal in folder-ul scss si scriem "node_modules/.bin/node-sass style.scss style.css" pentru a compila fisierul nostru scss (denumirile de .scss si .css trebuie schimbate cu numele curent al fisierului)*/
+/* mai trebuie sa instalam inca 2 fisiere pentru a mentine sincronizate scss-ul si css-ul, ca sa nu facem manual compilarea - instalam gulp si gulp-sass (acel "-g" este pentru global) */
