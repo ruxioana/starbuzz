@@ -1,0 +1,10 @@
+.parallax {
+    width: 100vw;
+    height: 500px;
+    background-image: url(https://raw.githubusercontent.com/miezuit/html_css_training/master/parallax/photographer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+p {
+    font-size: 1.3em;
+}

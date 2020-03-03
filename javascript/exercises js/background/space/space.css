@@ -1,0 +1,25 @@
+body {
+    background-image: url(https://raw.githubusercontent.com/miezuit/html_css_training/master/backgrounds/img/rocket.jpg), url(https://raw.githubusercontent.com/miezuit/html_css_training/master/backgrounds/img/earth.jpg), url(https://raw.githubusercontent.com/miezuit/html_css_training/master/backgrounds/img/space2.png); /* conteaza ordinea. primul url scris va fi in prim plan */
+    background-size: auto, 20%, auto; /* similar ca mai sus, se pune cu virgula daca avem mai multe imagini de fundal */
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: 30% 20%, center, 0 center;
+    height: 100vh;
+    animation-name: warp;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes warp {
+    /*from {}*/ /* nu e nevoie de el, pentru ca ia din setarile initiale */
+    to {
+        background-position: 30% 20%, center, -1024px center; /* modificam doar background-ul: orizontal vertical */
+    }
+}
+
+/*
+https://raw.githubusercontent.com/miezuit/html_css_training/master/backgrounds/img/earth.png
+https://raw.githubusercontent.com/miezuit/html_css_training/master/backgrounds/img/moon.png
+https://raw.githubusercontent.com/miezuit/html_css_training/master/backgrounds/img/rocket.png
+https://raw.githubusercontent.com/miezuit/html_css_training/master/backgrounds/img/space.jpg
+https://raw.githubusercontent.com/miezuit/html_css_training/master/backgrounds/img/space2.png
+*/
