@@ -9,19 +9,28 @@ a {
     color: cornflowerblue;
     font-size: 1.3em;
     font-family: Futura;
+    position: relative;
 }
-a:hover::after {
+a::after { /* "a:hover::after" trebuie sa se cheme daca facem cu animatie */
     content: "";
     display: block;
     height: 3px;
     background-color: blueviolet;
-    width: 0;
-    animation-name: grow;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    width: 100%;
+    position: absolute;
+/*  width: 0;
+    animation-name: grow; ori aimatie ori tranzitie
     animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
-@keyframes grow {
+a:hover::after {
+    transform: scale(1);
+}
+/*
+@keyframes grow { partea aceasta este tot pentru animatie
     to {
         width: 4em;
     }
-}
+} */
