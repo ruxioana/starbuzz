@@ -1,0 +1,9 @@
+div {
+    background-color: orchid;
+    width: 20vh; /* de obicei se pune vw, dar vrem patrat, asa ca ia valoarea de la height */
+    height: 20vh;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border-radius: 10px;
+}

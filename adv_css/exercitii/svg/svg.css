@@ -1,0 +1,17 @@
+svg circle {
+    stroke: blue; /* dam o alta valoare decat in http */
+    transform: scale(2); /* l-am dublat ca dimensiune */
+    /* r: 20px; /* se va schimba raza, chiar daca editotul nu recunoaste denumirea razei */ 
+    animation-name: animate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes animate {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }
+}

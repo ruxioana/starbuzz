@@ -4,27 +4,97 @@
     padding: 0;
     margin: 0;
 }
-main {
+.welcome, .portfolio {
     height: 100vh;
     width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.welcome {
+    z-index: 1; 
     background-color: black;
-    background-image: url('bkg_girl.jpg');
+    background-image: url('img/1.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition-duration: 2s;
+    transition-property: left;
+}
+.portfolio {
+    z-index: 0;
+    background-color: rgb(205, 92, 92);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pictures {
+    width: 80%; /* din parintele sau */
+    text-align: center;
+}
+.portfolio .pictures img {
+    width: 200px;
+    height: 300px;
 }
 .title {
     font-family: 'Libre Baskerville', sans-serif;
     font-size: 6em;
     font-weight: 900;
     color: white;
+    margin-top: 1em;
 }
-.enter {
+.enter, .back {
     font-family: sans-serif;
     color: white;
     font-size: 2em;
     text-align: center;
     margin-top: 1.5em;
+    position: relative;
+    cursor: pointer;
+}
+.enter::after, .back::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: black;
+    width: 0;
+    /* transition-property: width; ca sa se aplice la toate, nu doar la width */
+    transition-duration: 0.5s;
+}
+.enter:hover::after, .back:hover::after {
+    width: 100%;
+    background-color: white;
+}
+@keyframes bounce {
+    from{
+        color: white;
+        top: 0px;
+    }
+    to {
+        color: black;
+        top: -0.7em;
+    }
+}
+.title span {
+    position: relative;
+}
+.title span.bounce { /* span-urile care au clasa "bounce" vor fi animate in acest fel */
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate; /* se duce mai intai sus, apoi invers, adica jos */
+}
+/* facem noi clase pe care le vom repozitiona: ba in stanga, ba in dreapta, pentru a trece de la o pagina la cealalta */
+.slide-out {
+    left: -100vw; /* aici vrem ca pagina noastra sa inceapa din stanga mult, astfel incat sa nu se mai vada deloc; pagina se vad uce progresiv la stanga pana dispare */
+}
+.slide-in {
+    left: 0; /* aici vrem ca pagina noastra sa ajunga inapoi la pozitia originala */
 }
