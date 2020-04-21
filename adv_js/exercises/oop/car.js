@@ -43,6 +43,14 @@ var myFord = new Car("Ford", "Mondeo", 2016, "black", 210); /* este o instanta a
 var myNationalCar = new Car("Dacia", "Logan", 2020, "white", 170);
 
 myNationalCar.drive(100); /* va creste mileage, pentru ca este predefinit in clasa initiala */
+myFord.drive(120);
+myFord.drive(100);
+
+console.log(myFord.mileage); /* vrem sa rulam cu node.js, sa nu mai rulam in browser */
+
+var fordCopy = Object.assign({}, myFord);
+
+console.log(fordCopy);
 
 var myCar = { /* putem adauga sau sterge proprietati/functii dinamic din consola; ex. myCar.passengers = 2 */
     make: "Ford", /* marca */
