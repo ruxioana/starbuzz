@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moustache</title>
+    <script src="moustache.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-bind:class="myClass + (counter > 10 ? 'mare' : 'mic')"></span> <!-- mustatile nu functioneaza pentru proprietati/atribute ale elementelor, trebuie sa folosim v-bind (sau doar :class) si atunci putem folosi si alte expresii -->
+        {{ message + ' Yes, i do' }} <!-- concatenare -->
+        {{ 'counter is ' + (counter + 1) }}
+        {{ message.split('').reverse().join('') }} <!-- nu e recomandat sa punem aici partea de JS, dar se poate face -->
+        {{ reversedMessage }} <!-- face acelasi lucru ca mai sus: asa trebuie scris, nu ca mai sus -->
+        {{ counter > 10 ? 'mare' : 'mic' }} <!-- counter e mai mare ca 10? daca da, afisez 'mare', altfel afisez 'mic' -->
+        {{ <span>counter</span> }} <!-- counter nu este inlocuit cu valoarea lui, iar pe pagina se va afisa {{ counter }} -->
+    </div>
+</body>
+</html>

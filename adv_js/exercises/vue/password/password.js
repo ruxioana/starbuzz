@@ -2,37 +2,28 @@
 var app = new Vue({
     el: '#app',
     data: {
-        password: '', /* parola va fi modificata de fiecare data cand cineva modifica parola in input */
-        score: 0,
-        message: 'very weak',
-        messages: [
-            'the worst',
-            'very weak',
-            'still weak',
-            'just medium',
-            'better',
-            'strong enough'
-        ]
+        password: '', /* parola va fi modificata de fiecare data cand cineva modifica parola in input */     
     },
-    methods: { /* Vue nu are voie sa lucreze cu date/metode globale, de aceea vom folosi this. */
-        evaluateScore: function() {
+    computed: {
+        score() {
             // definim noul score initial egal cu 0 (diferit fata de cel de mai sus)
-            let newScore = 0;
+            /* let newScore = 0; */
             // evaluam fiecare conditie dintre cele 5
             // adaugam 1 la noul score pentru fiecare conditie adevarata si 0 la fiecare conditie falsa: exemplu procedural
-            newScore += this.hasSmallLetter(); /* pentru a nu mai scrie atatea linii (ca mai jos), we can assume, that the return valua of the function is either 0 for false, or 1 for true, so we can add that value directly to our newScore */
+            /* newScore += this.hasSmallLetter(); /* pentru a nu mai scrie atatea linii (ca mai jos), we can assume, that the return valua of the function is either 0 for false, or 1 for true, so we can add that value directly to our newScore 
             newScore += this.hasUpperLetter();
             newScore += this.hasDigit();
             newScore += this.hasSpecialChar();
-            newScore += this.isLongEnough();
+            newScore += this.isLongEnough(); */
             // o alternativa si mai compacta: exemplu functional
-            newScore = [
+            score = [
                 this.hasSmallLetter,
                 this.hasUpperLetter,
                 this.hasDigit,
                 this.hasSpecialChar,
                 this.isLongEnough
             ].reduce((score, func) => score + func(), 0); /* adaugam la score functia func(), care va lua pe rand fiecare functie de mai sus (si putem sa adaugam oricate functii noi mai vrem), iar scorul incepe de la 0 */
+            return score;
             /* if(this.hasSmallLetter()) {
                 newScore += 1;
             }
@@ -48,11 +39,20 @@ var app = new Vue({
             if(this.isLongEnough()) {
                 newScore += 1;
             } */
-            // inlocuim vechiul score cu noul score
-            this.score = newScore;
-            // inlocuim mesajul cu noul mesaj asociat noului score
-            this.message = this.messages[newScore]; /* mesajul va corespunde cu pozitia lui newScore, daca e 0, va fi afisat primul mesaj, daca e 2, va fi afisat al doilea mesaj, etc */
         },
+        message() {
+            let messages = [
+                'the worst',
+                'very weak',
+                'still weak',
+                'just medium',
+                'better',
+                'strong enough'
+            ];
+            return messages[this.score];
+        }
+    },
+    methods: { /* Vue nu are voie sa lucreze cu date/metode globale, de aceea vom folosi this. */
         hasSmallLetter: function() {
             return /[a-z]/.test(this.password); /* expresiile regulate se scriu intre /[...]/, ea este o functie si are metoda test, iar noi vrem sa testam parola noastra si returneaza true sau false */
         },

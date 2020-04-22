@@ -22,8 +22,21 @@ class Student extends Person { /* clasa student mosteneste clasa person, adica v
     }
 }
 
+class Teacher extends Person {
+    constructor(name, age, height, speciality) {
+        super(name, age, height);
+        this.speciality = speciality;
+    }
+    sayHello() {
+        super.sayHello();
+        console.log(`I'm a teacher and i teach ${this.speciality}.`);
+    }
+}
+
 var radu = new Person("Radu", 33, 170);
 var ruxi = new Student("Ruxi", 24, 158, "Java Script");
+var andu = new Teacher("Andrei", 27, 182, "Vue.js");
 
 radu.sayHello();
 ruxi.sayHello(); /* comportamente diferite pentru aceeasi medoda; se mai numeste si polimorfism */
+andu.sayHello();
