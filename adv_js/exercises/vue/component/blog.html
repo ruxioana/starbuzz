@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="blog.js" defer></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <hello text="Welcome to my site!"></hello> <!-- am creat un nou tag html -->
+        <button-counter @counter-clicked="doSomething($event)"></button-counter> <!-- in $event voi primi datele generate de acest counter-clicked; acesta este modul de comunicare intre elementele compuse din aplicatia noastra -->
+        <button-counter></button-counter> <!-- cele doua butoane de aici nu pot comunica direct unul cu celalalt, decat daca trimite informatia la parinte, iar parintele o trimite mai departe la celalalt buton -->
+        <button-counter></button-counter>
+    </div>
+</body>
+</html>

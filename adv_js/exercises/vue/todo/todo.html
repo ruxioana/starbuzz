@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js" defer></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <todo-list></todo-list> <!-- este noua componenta creata, doar de atat avem nevoie -->
+        <!-- <todo-list></todo-list> -->
+        <!-- <h1>To do:</h1> // este partea care ne-a ajutat inainte de a face componenta todo-list
+        <ul>
+            <task 
+                v-for="(todo, index) in todos"
+                :title="todo.title"
+                :is-done="todo.isDone" 
+                @checked="checkTodo(index)"
+                @deleted="deleteTodo(index)"> // in HTML, de exemplu "isDone" este case insensitive, deci HTML-ul il va transforma in "isdone" si nu va avea corespondent in proprietatile din js, unde este scris "isDone", motiv pentru care "is-done" va fi reinterpretat cum trebuie 
+            </task>
+        </ul>
+        <div class="new_task">
+            <div class="new_task_input">Task: <input type="text" v-model="task" @keyup.enter="saveTodo"></div> // keyup este la apasarea unei taste, si noi am zis ca la apasarea tastei enter sa se salveze task-ul scris 
+            <div class="save_task">
+                <button @click="saveTodo">Save item</button>
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>

@@ -1,4 +1,7 @@
 class Animal {
+    constructor(name) {
+        this.name = name;
+    }
     speak() { }
 }
 
@@ -20,10 +23,12 @@ class Duck extends Animal {
     }
 }
 
-var cat = new Cat();
-var dog = new Dog();
-var duck = new Duck();
+var cat = new Cat('Felix');
+var dog = new Dog('Rex');
+var duck = new Duck('Donald');
+var doggo = new Dog('Lessie');
 
 cat.speak();
 dog.speak();
 duck.speak();
+doggo.speak();
