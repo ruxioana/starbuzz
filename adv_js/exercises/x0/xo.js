@@ -28,5 +28,6 @@ function checkEndGame() {
 function checkComplete(cells) {
     if(cells.every(cell => $(cell).text() == 'X') || cells.every(cell => $(cell).text() == 'O')) { /* $(cell).text() ia textul din paranteze, adica cell, pentru a verifica daca este egal cu X sau O */
         $('.end').addClass('visible');
+        activePlayer = '';
     }
 }

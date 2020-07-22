@@ -5,6 +5,7 @@
 }
 body {
     text-align: center; /* pentru ca butonul si h1 sa fie pe centru */
+    user-select: none;
 }
 input[type=button] {
     background-color: cornflowerblue;
@@ -25,5 +26,5 @@ li {
     margin: 3px;
 }
 img {
-    visibility: hidden; /* am ascuns imaginile */
+    visibility: visible; /* am ascuns imaginile */
 }

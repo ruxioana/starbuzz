@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <link rel="stylesheet" href="transitions.css">
+    <script type="module" src="transitions.js"></script>
+</head>
+<body>
+    <div id="app">
+        <transition name="fade" appear> <!-- cand se incarca pagina, se intampla automat tranzitia -->
+            <div v-if="show">Now you see me fade</div> <!-- daca "show" e adev, se va arata -->
+        </transition>
+
+        <transition name="bounce" appear> <!-- cand se incarca pagina, se intampla automat tranzitia -->
+            <div v-if="show">Now you see me bounce</div> <!-- daca "show" e adev, se va arata -->
+        </transition>
+
+        <transition name="fade" mode="out-in"> 
+            <button v-if="isOn" @click="isOn = !isOn" key="On">On</button> <!-- key este o cheie unica, pt ca Vue sa realizeze ca sunt 2 butoane diferite, nu sa schimbe doar textul de pe un buton -->
+            <button v-else @click="isOn = !isOn" key="Off">Off</button>
+        </transition>
+        <input type="button" value="Press me" @click="show = !show">
+
+        <transition-group name="fade" tag="ul"> <!-- pt elemente dintr-o lista -->
+            <span v-for="number in numbers" :key="number"> {{ number }}</span>
+        </transition-group> 
+        <input type="button" value="Add" @click="add">
+        <input type="button" value="Remove" @click="remove">
+    </div>
+</body>
+</html>

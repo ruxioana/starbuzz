@@ -30,7 +30,7 @@ Vue.component('todo-list', { /* am facut o componenta de todo pe care sa o putem
             <input type="checkbox" v-model="showDone">
         </div>
         <ul>
-            <task 
+            <task
                 v-if="showDone || !todo.isDone"
                 v-for="(todo, index) in todos"
                 :title="todo.title"

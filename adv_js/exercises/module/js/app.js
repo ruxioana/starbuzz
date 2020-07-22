@@ -6,6 +6,11 @@ import { Superman } from './superman.js';
 import { Mage } from './mage.js';
 import { Assassin } from './assassin.js';
 
+/* pentru  putea utiliza modules, trebuie sa facem acel fisier package.json
+   si am putea schimba denumirea acestui fisier in app.mjs (dar tot va trebui sa folosim scrierea de mai jos)
+   node --experimental-modules app.js trebuie scris in terminal ca sa mearga aplicatia
+*/
+
 /* iar pentru a accesa o componenta din modul, scriem AllSupermen.Superman de exemplu */
 var clark = new Superman("Clark Kent", 1000, 1000);
 var merlin = new Mage("Merlin", 100, 300);

@@ -3,42 +3,43 @@ import { Todo } from '../class/todo.js';
 Vue.component('todo-list', { /* am facut o componenta de todo pe care sa o putem folosi oriunde */
     template: `
     <div class="todo-list">
-        <h1> {{ list_name }} </h1>
+        <h1>{{ list_name }}</h1>
         <div class="filters">
-            <label>Show done:</label>
-            <input type="checkbox" v-model="showDone">
+        <label>Show done:</label>
+        <input type="checkbox" v-model="showDone" />
         </div>
         <ul>
-            <task 
-                v-if="showDone || !todo.isDone"
-                v-for="(todo, index) in todos"
-                :todo="todo" 
-                @checked="checkTodo(index)"
-                @deleted="deleteTodo(index)"> <!-- in HTML, de exemplu "isDone" este case insensitive, deci HTML-ul il va transforma in "isdone" si nu va avea corespondent in proprietatile din js, unde este scris "isDone", motiv pentru care "is-done" va fi reinterpretat cum trebuie -->
-            </task> <!-- am pus :todo="todo" pentru ca am facut simplificarea in task.js la props -->
+        <task
+            v-for="(todo, index) in filteredTodos"
+            :key="index"
+            :task="todo"
+            @checked="checkTodo(index)"
+            @deleted="deleteTodo(index)" 
+        ></task> <!-- am pus :todo="todo" pentru ca am facut simplificarea in task.js la props -->
         </ul>
         <div class="new_task">
-            <div class="new_task_input">Task: <input type="text" v-model="task" @keyup.enter="saveTodo"></div> <!-- keyup este la apasarea unei taste, si noi am zis ca la apasarea tastei enter sa se salveze task-ul scris -->
-            <div class="save_task">
-                <button @click="saveTodo">Save item</button>
-            </div>
+        New:
+        <input type="text" class="task_input" v-model="task" @keyup.enter="saveTodo" />
+        <div class="save_task">
+            <button @click="saveTodo">+</button>
+        </div>
         </div>
     </div>
     `,
+    props: [ 'list_name' ],
     data() {
         return {
-            todos: [ 
+            todos: [
                 new Todo('Something to do')
             ], /* este bine ca initial sa avem niste date de test aici, pentru a ne fi mai usor sa vizualizam aplicatia, in loc sa stam sa scriem noi un task nou de fiecare data */
             task: '',
             showDone: true
         }
     },
-    props: [ 'list_name' ],
     methods: {
         saveTodo() {
-            // adaugam valoarea din task in list de todo
-            this.todos.push(new Todo(this.task)); /* trebuia sa fie this.task */
+            // adaugam valoarea din task in lista de todo
+            this.todos.push(new Todo(this.task));
             // resetam task-ul
             this.task = '';
         },
@@ -48,5 +49,10 @@ Vue.component('todo-list', { /* am facut o componenta de todo pe care sa o putem
         deleteTodo(index) {
             this.todos.splice(index, 1);
         }
-    }
+    },
+    computed: {
+        filteredTodos() {
+            return this.todos.filter(todo => this.showDone || !todo.isDone)
+        }
+    },
 });

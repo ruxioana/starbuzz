@@ -1,7 +1,7 @@
-const animals = ['turtle','snail','corgi','parrot','rabbit',
-'bear','panda','fish','shark','pig','crab','rhinoceros'];
+const animals = ['Turtle','Snail','Corgi','Puffin Bird','Rabbit',
+'Bear','Panda','Fish','Shark','Pig','Crab','Rhinoceros'];
 
-const url = 'https://png.icons8.com/100/000000/color/';
+const url = './animals_png/';
 
 var images = animals.map(x => url + x + '.png');
 
