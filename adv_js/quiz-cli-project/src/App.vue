@@ -4,7 +4,7 @@
 
 <script>
 import Quiz from './components/Quiz.vue'
-import Store from './store/index.vue'
+import store from './store/index.js'
 
 export default {
   name: 'App',

@@ -7,7 +7,7 @@
                 <p> {{ activeQuestion.text }} </p>
                 <ol>
                     <li
-                        v-for="(answer, index) in activeQuestion.answers"
+                        v-for="(answer) in activeQuestion.answers"
                         :key="answer.id"
                         @click="answerQuestion(answer.id)"
                         :class="{ selected : activeQuestion.isSelectedAnswer(answer.id) }"

@@ -4,7 +4,7 @@ import Quiz from '../model/Quiz.js'
 import Question from '../model/Question.js'
 import Answer from '../model/Answer.js'
 
-Vuex.use(Vuex)
+Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
